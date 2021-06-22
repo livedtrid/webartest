@@ -23,9 +23,10 @@
       <div id="unity-mobile-warning">
         Preferred Marketing Group
       </div>
-<div id="share">
-       <p><button>Share!</button></p>
-</div>
+	    
+	<div id="share-button">
+        Share!
+      </div>
 	   
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
@@ -52,6 +53,8 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
+	    
+	var btn = document.querySelector("#share-button");
 	  
 	  const shareData = {
   title: 'AR',
@@ -59,7 +62,7 @@
   url: 'https://livedtrid.github.io/webartest/',
 }
 
-const btn = document.querySelector('button');
+
 const resultPara = document.querySelector('.result');
 
 // Must be triggered some kind of "user activation"
