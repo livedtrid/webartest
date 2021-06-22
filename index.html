@@ -7,13 +7,9 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <body>	
-	    
-	  <p class="result"></p>
-	  
+  <body>
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
-	    	
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -22,11 +18,7 @@
       </div>
       <div id="unity-mobile-warning">
         Preferred Marketing Group
-      </div>	    
-	<div id="share-button">
-        Share!
       </div>
-	   
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
@@ -52,9 +44,6 @@
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
-	    
-	var btn = document.querySelector("#share-button");	    
-	var resultPara = document.querySelector('.result');
 	  
 	  const shareData = {
   title: 'AR',
@@ -62,16 +51,18 @@
   url: 'https://livedtrid.github.io/webartest/',
 }
 
+const btn = document.querySelector('button');
+const resultPara = document.querySelector('.result');
 
 // Must be triggered some kind of "user activation"
-btn.onclick = async () => {
+btn.addEventListener('click', async () => {
   try {
     await navigator.share(shareData)
     resultPara.textContent = 'MDN shared successfully'
   } catch(err) {
     resultPara.textContent = 'Error: ' + err
   }
-};
+});
 
       // By default Unity keeps WebGL canvas render target size matched with
       // the DOM size of the canvas element (scaled by window.devicePixelRatio)
