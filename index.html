@@ -37,7 +37,10 @@
         productName: "WebGLTest",
         productVersion: "0.1",
       };
-
+	    
+const btn = document.querySelector('button');
+const resultPara = document.querySelector('.result');
+	    
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -50,9 +53,6 @@
   text: 'Check this out!',
   url: 'https://livedtrid.github.io/webartest/',
 }
-
-const btn = document.querySelector('button');
-const resultPara = document.querySelector('.result');
 
 // Must be triggered some kind of "user activation"
 btn.addEventListener('click', async () => {
