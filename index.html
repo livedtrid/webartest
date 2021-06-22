@@ -22,8 +22,7 @@
       </div>
       <div id="unity-mobile-warning">
         Preferred Marketing Group
-      </div>
-	    
+      </div>	    
 	<div id="share-button">
         Share!
       </div>
@@ -54,7 +53,8 @@
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var mobileWarning = document.querySelector("#unity-mobile-warning");
 	    
-	var btn = document.querySelector("#share-button");
+	var btn = document.querySelector("#share-button");	    
+	var resultPara = document.querySelector('.result');
 	  
 	  const shareData = {
   title: 'AR',
@@ -62,8 +62,6 @@
   url: 'https://livedtrid.github.io/webartest/',
 }
 
-
-const resultPara = document.querySelector('.result');
 
 // Must be triggered some kind of "user activation"
 btn.onclick = async () => {
