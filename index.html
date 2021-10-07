@@ -1,5 +1,15 @@
 <!doctype html>
+<style>
+
+    button[slot="hotspot-hand"] {
+        --min-hotspot-opacity: 0;
+        background-color: red;
+    }
+</style>
+
 <html lang="en">
+
+
   <head>
 
     <title>&lt;model-viewer&gt; template</title>
@@ -27,9 +37,11 @@
               </div>
           </model-viewer>
 
-          <a style="position: absolute; background-color: rgba(0,0,0,0.3); color: white; top: 0; left: 0; right: 0; margin: auto; width: 100px; height: 40px; padding: 5px 40px; display: flex; align-items: center; justify-content: center;" href="http://www.google.com">Buy Me Now</a>
+          <a style="position: absolute; background-color: rgba(0,0,0,0.3); color: white; bottom: 0; left: 0; right: 0; margin: auto; width: 100px; height: 40px; padding: 5px 40px; display: flex; align-items: center; justify-content: center;" href="https://www.mylads.com/">Buy Me Now</a>
 
-
+          <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+              <div id="annotation">This hotspot disappears completely</div>
+          </button>
 
       </div>
     <!-- <model-viewer> HTML element -->
