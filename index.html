@@ -1,43 +1,41 @@
-<!DOCTYPE html>
-<!-- saved from url=(0038)https://livedtrid.github.io/webartest/ -->
-<html lang="en" class="js-focus-visible">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!doctype html>
+<html lang="en">
+  <head>
 
     <title>&lt;model-viewer&gt; template</title>
-
+    <meta charset="utf-8">
     <meta name="description" content="&lt;model-viewer&gt; template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link type="text/css" href="./_model-viewer_ template_files/styles.css" rel="stylesheet">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
     <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
-    <script src="./_model-viewer_ template_files/focus-visible.js" defer=""></script>
-</head>
-<body>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
 
 
-    <div style="margin: auto; width:700px; height: 700px; position:relative">
+      <div style="margin: auto; width:700px; height: 700px; position:relative">
+
+          <model-viewer src="jan_vertonhghen.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
+              <div class="progress-bar hide" slot="progress-bar">
+                  <div class="update-bar"></div>
+              </div>
+              <button slot="ar-button" id="ar-button">
+                  View in your space
+              </button>
+              <div id="ar-prompt">
+                  <img src="ar_hand_prompt.png">
+              </div>
+          </model-viewer>
+
+          <a style="position: absolute; background-color: rgba(0,0,0,0.3); color: white; top: 0; left: 0; right: 0; margin: auto; width: 100px; height: 40px; padding: 5px 40px; display: flex; align-items: center; justify-content: center;" href="http://www.google.com">Buy Me Now</a>
 
 
-        <model-viewer src="jan_vertonhghen.glb" ar="" ar-modes="webxr scene-viewer quick-look" camera-controls="" environment-image="neutral" poster="poster.webp" shadow-intensity="1" data-js-focus-visible="" ar-status="not-presenting">
-            <div class="progress-bar hide" slot="progress-bar">
-                <div class="update-bar" style="width: 100%;"></div>
-            </div>
-            <button slot="ar-button" id="ar-button">
-                View in your space
-            </button>
-            <div id="ar-prompt">
-                <img src="./_model-viewer_ template_files/ar_hand_prompt.png">
-            </div>
-        </model-viewer>
 
-        <a style="position: absolute; background-color: rgba(0,0,0,0.3); color: white; top: 0; left: 0; right: 0; margin: auto; width: 100px; height: 40px; padding: 5px 40px; display: flex; align-items: center; justify-content: center;" href="http://www.google.com/">Buy Me Now</a>
-
-    </div>
+      </div>
     <!-- <model-viewer> HTML element -->
 
-    <script src="./_model-viewer_ template_files/script.js"></script>
+    <script src="script.js"></script>
     <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="./_model-viewer_ template_files/model-viewer.min.js"></script>
-
-</body>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
 </html>
