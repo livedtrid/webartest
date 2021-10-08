@@ -1,5 +1,9 @@
 <!doctype html>
+
+
 <html lang="en">
+
+
 <head>
 
     <title>&lt;model-viewer&gt; template</title>
@@ -57,17 +61,7 @@
       <div style="margin: auto; width:700px; height: 700px; position:relative">
 
           <model-viewer src="Atletico_21-22_Home_n9_3D Jersey_GLB_AR_EXPORT.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="poster.webp" shadow-intensity="1">
-
-
-  <button slot="hotspot-visor" data-position="0 1.75 0.35" data-normal="0 0 1"></button>
-  <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
-    <div id="annotation">This hotspot disappears completely</div>
-  </button>
-  <button slot="hotspot-foot" data-position="0.16 0.1 0.17" data-normal="-0.07 0.97 0.23" data-visibility-attribute="visible"></button>
-  <div id="annotation">This annotation is fixed in screen-space</div>
-
-
-			  <div class="progress-bar hide" slot="progress-bar">
+              <div class="progress-bar hide" slot="progress-bar">
                   <div class="update-bar"></div>
               </div>
               <button slot="ar-button" id="ar-button">
@@ -80,7 +74,9 @@
 
           <a style="position: absolute; background-color: rgba(0,0,0,0.3); color: white; bottom: 0; left: 0; right: 0; margin: auto; width: 100px; height: 40px; padding: 5px 40px; display: flex; align-items: center; justify-content: center;" href="https://www.mylads.com/">Buy Me Now</a>
 
-
+          <button slot="hotspot-hand" data-position="-0.54 0.93 0.1" data-normal="-0.73 0.05 0.69">
+              <div id="annotation">This hotspot disappears completely</div>
+          </button>
 
       </div>
     <!-- <model-viewer> HTML element -->
